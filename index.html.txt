@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>イラストオーダー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🎨 イラストオーダー</h1>
+    <p class="subtitle">ご希望の内容を選択すると自動でお見積もりが表示されます。</p>
+
+    <div class="box">
+
+        <h2>描写範囲</h2>
+
+        <label><input type="radio" name="size" value="2000" checked> 顔アップ（2,000円）</label>
+        <label><input type="radio" name="size" value="3000"> 胸上（3,000円）</label>
+        <label><input type="radio" name="size" value="4500"> 腰上（4,500円）</label>
+        <label><input type="radio" name="size" value="6000"> 全身（6,000円）</label>
+
+    </div>
+
+    <div class="box">
+
+        <h2>人数</h2>
+
+        <select id="people">
+            <option value="1">1人</option>
+            <option value="2">2人</option>
+            <option value="3">3人</option>
+            <option value="4">4人</option>
+        </select>
+
+    </div>
+
+    <div class="box">
+
+        <h2>背景</h2>
+
+        <label><input type="radio" name="bg" value="0" checked> 単色・透過</label>
+        <label><input type="radio" name="bg" value="500"> 簡易背景（+500円）</label>
+        <label><input type="radio" name="bg" value="2000"> 描き込み背景（+2,000円）</label>
+
+    </div>
+
+    <div class="box">
+
+        <h2>小物・特殊装飾</h2>
+
+        <label><input type="checkbox" class="option" value="500"> 花束</label>
+        <label><input type="checkbox" class="option" value="500"> ぬいぐるみ</label>
+        <label><input type="checkbox" class="option" value="1000"> 武器</label>
+        <label><input type="checkbox" class="option" value="500"> フリル・装飾多め</label>
+        <label><input type="checkbox" class="option" value="500"> 角・しっぽ</label>
+        <label><input type="checkbox" class="option" value="1000"> 翼</label>
+        <label><input type="checkbox" class="option" value="1000"> 魔法エフェクト</label>
+        <label><input type="checkbox" class="option" value="1500"> 複雑な衣装</label>
+
+        <label class="other-label">
+            その他
+            <input type="text" id="otherItem" placeholder="例：王冠、魔導書、ペットなど">
+        </label>
+
+    </div>
+
+    <div class="box">
+
+        <h2>キャラクターデザイン</h2>
+
+        <label><input type="radio" name="design" value="0" checked> 資料あり</label>
+        <label><input type="radio" name="design" value="2000"> おまかせ（+2,000円）</label>
+
+    </div>
+
+    <div class="box">
+
+        <h2>納期</h2>
+
+        <label><input type="radio" name="deadline" value="0" checked> 通常納期（4〜8週間）</label>
+        <label><input type="radio" name="deadline" value="2000"> 7日以内（+2,000円）</label>
+        <label><input type="radio" name="deadline" value="4000"> 3日以内（+4,000円）</label>
+
+    </div>
+
+    <div class="box">
+
+        <h2>商用利用</h2>
+
+        <label><input type="checkbox" id="commercial"> 商用利用する（+50%）</label>
+
+    </div>
+
+    <div class="estimate-box">
+
+        <h2>お見積もり</h2>
+
+        <div id="total" class="total-price">
+            2,000円
+        </div>
+
+    </div>
+
+    <div class="box">
+
+        <h2>依頼テンプレート</h2>
+
+        <textarea id="template" readonly></textarea>
+
+        <button id="copyBtn">
+            テンプレートをコピー
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
